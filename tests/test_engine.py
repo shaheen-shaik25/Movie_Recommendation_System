@@ -59,3 +59,12 @@ def test_explain_returns_text(rec):
     a = rec.id_for_title("The Dark Knight Rises")
     other = rec.recommend(a, n=1).iloc[0]
     assert isinstance(rec.explain(a, other), str)
+
+
+def test_evaluation_beats_baselines(rec):
+    from recommender.evaluation import evaluate
+
+    t = evaluate(rec, k=5, sample=150, seed=1)
+    m, r = t.loc["Content-based (this app)"], t.loc["Random baseline"]
+    assert m["Genre precision@5"] > r["Genre precision@5"] + 0.2
+    assert m["Franchise hit@5"] > r["Franchise hit@5"]

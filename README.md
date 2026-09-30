@@ -1105,8 +1105,7 @@ This product uses the TMDB API but is **not endorsed or certified by TMDB**.
 
 # 👨‍💻 Author
 
-**Your Name**
-
+**Shaheen Shaik**
 Computer Science Undergraduate
 
 ### Interests

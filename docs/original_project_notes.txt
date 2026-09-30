@@ -1,0 +1,42 @@
+Project title:Movie recommender system
+
+Type:Content based recommendation
+
+Project flow:
+dataset --> preprocessing --> model building --> website(application) --> deploy
+
+Dataset: TMDB 5000 movie dataset
+
+step 1
+# merging the datasets based on title 
+
+step 2
+# removing the columns 
+## ---> keep :movie_id,title,overview,genres,keywords,cast,crew
+
+step 3
+#again creating a new dataset having movie_id|title|tags
+*tags col is created by merging the overview,genres,keywords,cast,crew 
+*we can combine overview with genres,keywords,top 3 cast, director in crew --->we have to format all these columns
+
+step 4:preprocessing
+
+
+step 5:vectorization
+#we have to calculate the similarity score.
+* we have to convert the tag text to the vectors using the Bag of Words technique
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
